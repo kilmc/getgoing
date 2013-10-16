@@ -1,45 +1,27 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 @import 'reset';
-
-// ---------------------------------------------------------
-// Mixins & Variables
-// ---------------------------------------------------------
-
-// COLOURS
-$dark-grey: #1C1C1C;
-
-// TRANSITIONS
-
-@mixin fade {
-  @include transition (all 0.15s ease-in-out);
-}
-
-@mixin fast-fade {
-  @include transition (all 0.05s ease-in-out);
-}
+@import 'helpers';
 
 
-// ---------------------------------------------------------
-// Base
-// ---------------------------------------------------------
+/* Base
+================================ */
 
 body {
-  font-family: Helvetica;
-  color: $dark-grey;
+  color: $c-primary;
+  font-family: $t-fam-primary;
 }
 
 a, a:link, a:visited {
+  color: $c-primary;
   text-decoration: none;
-  color: $dark-grey;
 }
 
 
-// ---------------------------------------------------------
-// Text
-// ---------------------------------------------------------
+/* Text
+================================ */
 
-// Use the class text on any container specifically for textual content
+// Use the class "text" on any container specifically for textual content
 
 .text {
   h1 {
@@ -57,16 +39,41 @@ a, a:link, a:visited {
   h4 {
     font-size: 1.5em;
   }
-
-  ul {
-
-  }
-
-  ol {
-
-  }
-
-  blockquote {
-
-  }
 }
+
+
+/* Main Site
+================================ */
+
+.site-wrapper {
+  margin: 4em auto;
+  width: 40em;
+}
+
+// Header
+
+.site-header {
+
+}
+
+.site-logo {
+  font-size: $t-size;
+  font-weight: $t-weight;
+}
+
+// Footer
+
+.site-footer {
+
+}
+
+
+/* Content Area
+================================ */
+
+.site-content {
+
+}
+
+
+
