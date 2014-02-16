@@ -1,11 +1,18 @@
-@import 'vendor/bourbon/bourbon';
-@import 'vendor/neat/neat';
+// Vendor
+@import '../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss';
+@import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
+@import '../../bower_components/garnish/src/garnish';
+
 @import 'reset';
 @import 'helpers';
 
 
 /* Base
 ================================ */
+
+html {
+  font-size: 62.5%
+}
 
 body {
   color: $c-primary;
@@ -25,19 +32,19 @@ a, a:link, a:visited {
 
 .text {
   h1 {
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
 
   h3 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   h4 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 
@@ -46,8 +53,8 @@ a, a:link, a:visited {
 ================================ */
 
 .site-wrapper {
-  margin: 4em auto;
-  width: 40em;
+  margin: 4rem auto;
+  width: 40rem;
 }
 
 // Header
@@ -57,7 +64,7 @@ a, a:link, a:visited {
 }
 
 .site-logo {
-  font-size: $t-size;
+  @include font-size(2.4);
   font-weight: $t-weight;
 }
 
@@ -76,4 +83,6 @@ a, a:link, a:visited {
 }
 
 
-
+.ie {
+  @import 'ie';
+}
